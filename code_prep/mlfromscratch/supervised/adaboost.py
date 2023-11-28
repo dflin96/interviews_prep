@@ -98,7 +98,8 @@ class Adaboost(BaseEstimator):
         #for w, cl in zip(self.weights, self.cls):
         #    print(w, cl.score)
 
-    def fit(self, X, Y, cls=[]):
+    def fit(self, X, Y, cls=None):
+        cls = [] if cls is None else cls
         self.X = X
         self.Y = Y
         self.cls = cls
