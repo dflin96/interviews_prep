@@ -45,8 +45,7 @@ class Graph:
             previous[vertex] = None
 
         while nodes:
-            closest = heapq.heappop(nodes)[1]
-            if closest == finish:
+            if (closest := heapq.heappop(nodes)[1]) == finish:
                 path = []
                 while previous[closest]:
                     path.append(closest)

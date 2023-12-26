@@ -37,8 +37,7 @@ def garage(initial, final):
     steps = 0
     seq = []                  # list of each step in sequence
     while initial != final:
-        zero = initial.index(0)
-        if zero != final.index(0):
+        if (zero := initial.index(0)) != final.index(0):
             car_to_move = final[zero]
             pos = initial.index(car_to_move)
             initial[zero], initial[pos] = initial[pos], initial[zero]
