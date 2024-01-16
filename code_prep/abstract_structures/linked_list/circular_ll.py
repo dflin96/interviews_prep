@@ -41,7 +41,7 @@ class CircularLinkedNode(LinkedList):
                     node = node.next
                 return node
             except:
-                Exception('This index can t be found')
+                raise Exception('This index can t be found')
 
     def getLastNode(self):
         node = self.head

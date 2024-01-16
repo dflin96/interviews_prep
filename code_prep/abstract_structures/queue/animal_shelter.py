@@ -55,4 +55,4 @@ class AnimalShelter:
          try:
              self.shelter[kind].dequeue()
          except:
-            Exception('Error')
+            raise Exception('Error')

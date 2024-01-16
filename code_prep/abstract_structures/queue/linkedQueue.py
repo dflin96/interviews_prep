@@ -125,4 +125,4 @@ class LinkedQueue(object):
             self.tail = previous
             return tail.value
         else:
-            Exception('Can t dequeue, empty list')
+            raise Exception('Can t dequeue, empty list')
