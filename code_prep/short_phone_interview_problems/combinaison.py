@@ -6,7 +6,7 @@ __author__ = "tchaton"
 
 def test():
     array = ['a', 'b', 'c']
-    result = set(['', 'c', 'b', 'bc', 'a', 'ac', 'ab', 'abc'])
+    result = {'', 'c', 'b', 'bc', 'a', 'ac', 'ab', 'abc'}
     assert(combination(array) == result)
 
 def fact(n):

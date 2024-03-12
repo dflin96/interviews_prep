@@ -16,12 +16,12 @@ import unittest
 
 class Test(unittest.TestCase):
     def test_permutations(self):
-        self.assertEqual(permutation("ABCD"), list(set(["ABCD", "ABDC", "ACBD", "ACDB",
+        self.assertEqual(permutation("ABCD"), list({"ABCD", "ABDC", "ACBD", "ACDB",
             "ADBC", "ADCB", "BACD", "BADC", "BCAD", "BCDA", "BDAC", "BDCA",
             "CABD", "CADB", "CBAD", "CBDA", "CDAB", "CDBA", "DABC", "DACB",
-            "DBAC", "DBCA", "DCAB", "DCBA"])))
-        self.assertEqual(permutation("abca"), list(set(["aabc", "aacb", "abac", "abca",
-    "acab", "acba", "baac", "baca", "bcaa", "caab", "caba", "cbaa"])))
+            "DBAC", "DBCA", "DCAB", "DCBA"}))
+        self.assertEqual(permutation("abca"), list({"aabc", "aacb", "abac", "abca",
+    "acab", "acba", "baac", "baca", "bcaa", "caab", "caba", "cbaa"}))
 
 if __name__ == "__main__":
     unittest.main()

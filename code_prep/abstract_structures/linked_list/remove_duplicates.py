@@ -22,7 +22,7 @@ def remove_duplicates(lk):
 class Test(unittest.TestCase):
     def test_remove_duplicates(self):
         arr = [1, 2, 1, 2, 5, 6, 7, 5, 9]
-        arr2 = list(set([1, 2, 1, 2, 5, 6, 7, 5, 9]))
+        arr2 = list({1, 2, 1, 2, 5, 6, 7, 5, 9})
         lk = LinkedList()
         for v in arr:
             lk.add(v)
