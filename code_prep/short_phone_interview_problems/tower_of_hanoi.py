@@ -1,7 +1,8 @@
 # Move the blocks on tower1 to tower3.
 
 class Tower(object):
-    def __init__(self, name, discs=[]):
+    def __init__(self, name, discs=None):
+        discs = [] if discs is None else discs
         self.name = name
         self.discs = discs
 
@@ -13,7 +14,8 @@ class Tower(object):
 
 class Towers_of_hanoi(object):
 
-    def __init__(self, towers=[], source='Tower1', target='Tower3', auxiliary='Tower2'):
+    def __init__(self, towers=None, source='Tower1', target='Tower3', auxiliary='Tower2'):
+        towers = [] if towers is None else towers
         self.towers = {tower.name:tower for tower in towers}
         self.source = source
         self.target = target

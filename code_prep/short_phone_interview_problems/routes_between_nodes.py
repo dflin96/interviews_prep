@@ -6,7 +6,8 @@ import numpy as np
 def find_route(node1, node2):
     seen = []
     real_path = []
-    def _find_route(node1, node2, path=[], cnt=0):
+    def _find_route(node1, node2, path=None, cnt=0):
+        path = [] if path is None else path
         #print(cnt)
         if node1 is not None:
             #print(path, node1.data, [n.data for n in node1.adjs])
@@ -42,7 +43,8 @@ def find_route(node1, node2):
         return set(out)
 
 class Node():
-    def __init__(self, data, adjacency_list=[]):
+    def __init__(self, data, adjacency_list=None):
+        adjacency_list = [] if adjacency_list is None else adjacency_list
         self.data = data
         self.adjacency_list = adjacency_list
 
