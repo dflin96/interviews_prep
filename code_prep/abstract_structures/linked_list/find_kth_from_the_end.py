@@ -35,4 +35,4 @@ class LinkedList_find_kth(LinkedList):
                     node_k = node_k.next
             return node_k
         except:
-            Exception('The list doesn t contain k elements')
+            raise Exception('The list doesn t contain k elements')
